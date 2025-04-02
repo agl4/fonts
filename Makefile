@@ -23,7 +23,10 @@ else
 	@echo "Done."
 endif
 
+.PHONY : create-fontdir
+create-fontdir :
+	mkdir -p $FONTDIR || true
 
 .PHONY : install
-install : $(FONT_TARGETS)
+install : create-fontdir $(FONT_TARGETS)
 	@$(MAKE) update-fc-cache
