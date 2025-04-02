@@ -28,5 +28,5 @@ create-fontdir :
 	mkdir -p $FONTDIR || true
 
 .PHONY : install
-install : create-fontdir $(FONT_TARGETS)
+install : $(FONT_TARGETS)
 	@$(MAKE) update-fc-cache
