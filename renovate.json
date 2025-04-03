@@ -5,7 +5,7 @@
             "description": "Update _VERSION variables in Dockerfiles",
             "fileMatch": ["*?\\.mk"],
             "matchStrings": [
-                "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s.+?_VERSION := (?<currentValue>.+?)\\s"
+                "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))(?: registryurl=(?<registryurl>[a-z-]+?))?\\s.+?_VERSION := (?<currentValue>.+?)\\s"
             ]
         }
     ]
