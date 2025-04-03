@@ -7,4 +7,8 @@ install-iosevka : create-fontdir
 	cd "${IOSEVKA_DIR}" && unzip -x file.zip
 	find "${IOSEVKA_DIR}" -type f -name "*.ttf" | xargs -I "{}" cp -v "{}" "${FONTDIR}/"
 
+test-iosevka :
+	fc-list -v | grep -i iosevka
+
 INSTALL_TARGETS += install-iosevka
+TEST_TARGETS += test-iosevka
