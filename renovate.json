@@ -1,14 +1,12 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:recommended"],
     "customManagers": [
         {
             "customType": "regex",
-            "fileMatch": ["^versions.mk"],
+            "description": "Update _VERSION variables in Dockerfiles",
+            "fileMatch": ["*?\\.mk"],
             "matchStrings": [
-                "# renovate: datasource=(?<datasource>.*?)\\s+depName=(?<depName>.*?)\\s+versioning=(?<versioning>.*?)\\s+registryUrl=(?<registryUrl>.*?)\\n.*?_VERSION\\s:=\\s(?<currentValue>.*)"
-            ],
-            "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+                "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s.+?_VERSION := (?<currentValue>.+?)\\s"
+            ]
         }
     ]
 }
