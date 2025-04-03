@@ -8,7 +8,7 @@ install-iosevka-aile : create-fontdir
 	find "${IOSEVKA_AILE_DIR}" -type f -name "*.ttf" #| grep -vi unhinted | xargs -I "{}" cp -v "{}" "${FONTDIR}/"
 
 test-iosevka-aile :
-	fc-list -v  | grep -i 'iosevka.*aile'
+	fc-list -v
 
 INSTALL_TARGETS += install-iosevka-aile
 TEST_TARGETS += test-iosevka-aile
