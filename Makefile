@@ -7,7 +7,8 @@ else
         export TERMINAL=gnome-terminal
 endif
 
-FONT_TARGETS :=
+INSTALL_TARGETS :=
+TEST_TARGETS :=
 include make/versions.mk
 include make/aporetic.mk
 include make/iosevka.mk
@@ -28,5 +29,8 @@ create-fontdir :
 	mkdir -p "${FONTDIR}" || true
 
 .PHONY : install
-install : $(FONT_TARGETS)
+install : $(INSTALL_TARGETS)
 	@$(MAKE) update-fc-cache
+
+.PHONY : test
+test : $(TEST_TARGETS)

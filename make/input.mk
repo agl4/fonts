@@ -7,4 +7,4 @@ install-input : create-fontdir
 	cd "${INPUT_DIR}" && unzip -x file.zip
 	find "${INPUT_DIR}" -type f -name "*.ttf" | xargs -I "{}" cp -v "{}" "${FONTDIR}/"
 
-FONT_TARGETS += install-input
+INSTALL_TARGETS += install-input

@@ -10,5 +10,5 @@ install-aporetic : create-fontdir
 test-aporetic :
 	fc-list -v | grep -i aporetic
 
-FONT_TARGETS += install-aporetic
+INSTALL_TARGETS += install-aporetic
 TEST_TARGETS += test-aporetic

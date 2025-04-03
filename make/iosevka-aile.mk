@@ -7,4 +7,4 @@ install-iosevka-aile : create-fontdir
 	cd "${IOSEVKA_AILE_DIR}" && unzip -x file.zip
 	find "${IOSEVKA_AILE_DIR}" -type f -name "*.ttf" #| grep -vi unhinted | xargs -I "{}" cp -v "{}" "${FONTDIR}/"
 
-FONT_TARGETS += install-iosevka-aile
+INSTALL_TARGETS += install-iosevka-aile
