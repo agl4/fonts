@@ -6,7 +6,7 @@
             "customType": "regex",
             "fileMatch": ["^versions.mk"],
             "matchStrings": [
-                "# renovate: datasource=(?<datasource>.*?)\s+depName=(?<depName>.*?)\s+versioning=(?<versioning>.*?)\s+registryUrl=(?<registryUrl>.*?)\n.*?_VERSION\s:=\s(?<currentValue>.*)"
+                "# renovate: datasource=(?<datasource>.*?)\\s+depName=(?<depName>.*?)\\s+versioning=(?<versioning>.*?)\\s+registryUrl=(?<registryUrl>.*?)\\n.*?_VERSION\\s:=\\s(?<currentValue>.*)"
             ],
             "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
         }
