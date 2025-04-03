@@ -9,7 +9,7 @@ install-iosevka : create-fontdir
 	@$(MAKE) update-fc-cache
 
 test-iosevka :
-	fc-list -v | grep -i iosevka
+	fc-list -v | grep -i iosevka\ aile
 
 INSTALL_TARGETS += install-iosevka
 TEST_TARGETS += test-iosevka
