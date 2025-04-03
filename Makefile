@@ -25,7 +25,7 @@ endif
 
 .PHONY : create-fontdir
 create-fontdir :
-	mkdir -p $FONTDIR || true
+	mkdir -p "${FONTDIR}" || true
 
 .PHONY : install
 install : $(FONT_TARGETS)
