@@ -7,4 +7,8 @@ install-aporetic : create-fontdir
 	cd "${APORETIC_DIR}" && gzip -cd file.tar.gz | tar -xvf -
 	find "${APORETIC_DIR}" -type f -name "*.ttf" | grep -vi unhinted | xargs -I "{}" cp -v "{}" "${FONTDIR}/"
 
+test-aporetic :
+	fc-list -v | grep -i aporetic
+
 FONT_TARGETS += install-aporetic
+TEST_TARGETS += test-aporetic
