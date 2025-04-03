@@ -6,6 +6,7 @@ install-iosevka-aile : create-fontdir
 	curl -SL "${IOSEVKA_URL}" -o "${IOSEVKA_AILE_DIR}/file.zip"
 	cd "${IOSEVKA_AILE_DIR}" && unzip -x file.zip
 	find "${IOSEVKA_AILE_DIR}" -type f -name "*.ttf" #| grep -vi unhinted | xargs -I "{}" cp -v "{}" "${FONTDIR}/"
+	@$(MAKE) update-fc-cache
 
 test-iosevka-aile :
 	fc-list -v |grep -i iosevka

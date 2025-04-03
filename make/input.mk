@@ -6,5 +6,6 @@ install-input : create-fontdir
 	curl -SL "${INPUT_URL}" -o "${INPUT_DIR}/file.zip"
 	cd "${INPUT_DIR}" && unzip -x file.zip
 	find "${INPUT_DIR}" -type f -name "*.ttf" | xargs -I "{}" cp -v "{}" "${FONTDIR}/"
+	@$(MAKE) update-fc-cache
 
 INSTALL_TARGETS += install-input

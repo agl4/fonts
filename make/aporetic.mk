@@ -6,6 +6,7 @@ install-aporetic : create-fontdir
 	curl -SL "${APORETIC_URL}" -o "${APORETIC_DIR}/file.tar.gz"
 	cd "${APORETIC_DIR}" && gzip -cd file.tar.gz | tar -xvf -
 	find "${APORETIC_DIR}" -type f -name "*.ttf" | grep -vi unhinted | xargs -I "{}" cp -v "{}" "${FONTDIR}/"
+	@$(MAKE) update-fc-cache
 
 test-aporetic :
 	fc-list -v | grep -i aporetic

@@ -30,7 +30,6 @@ create-fontdir :
 
 .PHONY : install
 install : $(INSTALL_TARGETS)
-	@$(MAKE) update-fc-cache
 
 .PHONY : test
 test : $(TEST_TARGETS)
