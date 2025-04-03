@@ -1,0 +1,16 @@
+---
+name: Iosevka Aile
+
+on:
+  push:
+    paths:
+      - Makefile
+      - make/iosevka-aile.mk
+
+jobs:
+  install-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make install-iosevka-aile
+      - run: make test-iosevka-aile

@@ -11,8 +11,8 @@ INSTALL_TARGETS :=
 TEST_TARGETS :=
 include make/versions.mk
 include make/aporetic.mk
-# include make/iosevka.mk
-# include make/iosevka-aile.mk
+include make/iosevka.mk
+include make/iosevka-aile.mk
 # include make/input.mk
 
 .PHONY : update-fc-cache
