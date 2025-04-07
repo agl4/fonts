@@ -1,5 +1,5 @@
 # renovate: datasource=github-tags depName=protesilaos/aporetic versioning=semver registryUrl=https://github.com
-APORETIC_VERSION := 1.0.0
+APORETIC_VERSION := 1.1.0
 APORETIC_DIR := $(shell mktemp -d)
 APORETIC_URL := https://github.com/protesilaos/aporetic/archive/refs/tags/${APORETIC_VERSION}.tar.gz
 
