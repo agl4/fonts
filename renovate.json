@@ -3,7 +3,7 @@
         {
             "customType": "regex",
             "description": "Update _VERSION variables in Makefiles",
-            "fileMatch": ["^make/iosevka.mk"],
+            "fileMatch": ["\\.mk$"],
             "matchStrings": [
                 "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+) versioning=(?<versioning>\\S+) registryUrl=(?<registryUrl>\\S+)\\s.+?_VERSION := (?<currentValue>\\S+)\\s"
             ]
