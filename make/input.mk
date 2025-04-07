@@ -8,4 +8,9 @@ install-input : create-fontdir
 	find "${INPUT_DIR}" -type f -name "*.ttf" | xargs -I "{}" cp -v "{}" "${FONTDIR}/"
 	@$(MAKE) update-fc-cache
 
+test-input :
+	fc-list -v | grep -i 'Input.*Mono'
+
+
 INSTALL_TARGETS += install-input
+TEST_TARGETS += test-input
