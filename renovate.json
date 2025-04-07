@@ -2,10 +2,10 @@
     "customManagers": [
         {
             "customType": "regex",
-            "description": "Update _VERSION variables in Dockerfiles",
-            "fileMatch": [".*?\\.mk"],
+            "description": "Update _VERSION variables in Makefiles",
+            "fileMatch": ["^make/iosevka.mk"],
             "matchStrings": [
-                "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))(?: registryurl=(?<registryurl>[a-z-]+?))?\\s.+?_VERSION := (?<currentValue>.+?)\\s"
+                "# renovate: datasource=(?<datasource>\\S+) depName=(?<depName>\\S+) versioning=(?<versioning>\\S+) registryUrl=(?<registryUrl>\\S+)\\s.+?_VERSION := (?<currentValue>\\S+)\\s"
             ]
         }
     ]
