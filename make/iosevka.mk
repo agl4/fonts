@@ -1,5 +1,5 @@
 # renovate: datasource=github-releases depName=be5invis/Iosevka versioning=semver registryUrl=https://github.com
-IOSEVKA_VERSION := v33.2.0
+IOSEVKA_VERSION := v33.2.1
 IOSEVKA_DIR := $(shell mktemp -d)
 IOSEVKA_URL := https://github.com/be5invis/Iosevka/releases/download/${IOSEVKA_VERSION}/PkgTTF-Iosevka-$(shell echo "${IOSEVKA_VERSION}" | sed 's/^v//').zip
 
