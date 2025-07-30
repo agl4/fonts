@@ -1,5 +1,7 @@
 # fonts
 
+Installs the following fonts, support Linux and macOS.
+
 | Font name                                                                                                                                                  | Link                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
 | [![Aporetic](https://github.com/agl4/fonts/actions/workflows/aporetic.yml/badge.svg)](https://github.com/agl4/fonts/actions/workflows/aporetic.yml)        | [Aporetic](https://github.com/protesilaos/aporetic) |
