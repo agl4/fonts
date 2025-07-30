@@ -1,0 +1,16 @@
+---
+name: Inter
+
+on:
+  push:
+    paths:
+      - Makefile
+      - make/inter.mk
+
+jobs:
+  install-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make install-inter
+      - run: make test-inter

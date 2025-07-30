@@ -14,6 +14,7 @@ include make/aporetic.mk
 include make/iosevka.mk
 include make/iosevka-aile.mk
 include make/input.mk
+include make/inter.mk
 
 .PHONY : update-fc-cache
 update-fc-cache :
